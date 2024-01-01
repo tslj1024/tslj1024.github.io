@@ -74,9 +74,9 @@
 
   <div class="article-top-meta">
     <span class="posted-on">
-      <a href="/2023/06/18/GitHub-Pages-Hexo搭建静态页面/" rel="bookmark">
-        <time class="entry-date published" datetime="2023-06-18T13:08:06.000Z">
-          2023-06-18
+      <a href="/2023/12/31/GitHub-Pages-Hexo搭建静态页面/" rel="bookmark">
+        <time class="entry-date published" datetime="2023-12-31T13:08:06.000Z">
+          2023-12-31
         </time>
       </a>
     </span>
@@ -90,22 +90,28 @@
       
         <p>当你想将自己的博客或静态网站发布到互联网上时，GitHub Pages和Hexo是两个非常不错的选择。GitHub Pages提供了免费的托管服务，而Hexo是一个功能强大的静态网站生成器。结合使用起来，你可以通过Hexo快速构建和发布静态网站，而且很容易将生成的站点通过Git部署到GitHub Pages上，实现免费托管、自动化部署。下面让我们详细介绍一下如何使用GitHub Pages和Hexo搭建自己的静态页面。</p>
 <span id="more"></span>
-<h2 id="1-安装nodejs"><a href="#1-安装nodejs" class="headerlink" title="1.安装nodejs"></a>1.安装nodejs</h2><blockquote>
+<h2 id="1-安装nodejs"><a class="header-anchor" href="#1-安装nodejs">¶</a>1.安装nodejs</h2>
+<blockquote>
 <p>截至文章发布，本人安装的node版本是<code>16.16.0</code></p>
 </blockquote>
 <p><a target="_blank" rel="noopener" href="https://nodejs.org/zh-cn">Node官网</a></p>
 <p>下载Nodejs，安装</p>
 <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node -v # 查看nodejs版本</span><br><span class="line">npm -v # 查看npm版本</span><br></pre></td></tr></table></figure>
-<h2 id="2-安装git"><a href="#2-安装git" class="headerlink" title="2.安装git"></a>2.安装git</h2><p><a target="_blank" rel="noopener" href="https://git-scm.com/download/win">Git官网</a></p>
+<h2 id="2-安装git"><a class="header-anchor" href="#2-安装git">¶</a>2.安装git</h2>
+<p><a target="_blank" rel="noopener" href="https://git-scm.com/download/win">Git官网</a></p>
 <p>下载Git，安装，查看Git版本 <code>git -v</code></p>
-<h2 id="3-安装hexo"><a href="#3-安装hexo" class="headerlink" title="3.安装hexo"></a>3.安装hexo</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">npm i -g hexo-cli</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">hexo -v <span class="comment"># 查看hexo版本</span></span></span><br></pre></td></tr></table></figure>
-<h2 id="4-建立本地项目"><a href="#4-建立本地项目" class="headerlink" title="4.建立本地项目"></a>4.建立本地项目</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">hexo init &lt;folder&gt; <span class="comment"># folder是项目文件夹名</span></span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="built_in">cd</span> &lt;folder&gt;</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">npm i</span></span><br></pre></td></tr></table></figure>
+<h2 id="3-安装hexo"><a class="header-anchor" href="#3-安装hexo">¶</a>3.安装hexo</h2>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">npm i -g hexo-cli</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">hexo -v <span class="comment"># 查看hexo版本</span></span></span><br></pre></td></tr></table></figure>
+<h2 id="4-建立本地项目"><a class="header-anchor" href="#4-建立本地项目">¶</a>4.建立本地项目</h2>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">hexo init &lt;folder&gt; <span class="comment"># folder是项目文件夹名</span></span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="built_in">cd</span> &lt;folder&gt;</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">npm i</span></span><br></pre></td></tr></table></figure>
 <p>现在就是默认的<strong>主题</strong>和默认的<strong>配置</strong>，我们可以在本地启动一下，注意，4000端口要确保不被占用</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">hexo g <span class="comment"># 生成</span></span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">hexo s <span class="comment"># 本地启动</span></span></span><br></pre></td></tr></table></figure>
 <p><a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000/</a></p>
-<h2 id="5-在GitHub上建立仓库"><a href="#5-在GitHub上建立仓库" class="headerlink" title="5.在GitHub上建立仓库"></a>5.在GitHub上建立仓库</h2><p>首先，你需要一个GitHub账号，没有的话，可以先去申请一下，<a target="_blank" rel="noopener" href="https://github.com/">GitHub</a></p>
+<h2 id="5-在GitHub上建立仓库"><a class="header-anchor" href="#5-在GitHub上建立仓库">¶</a>5.在GitHub上建立仓库</h2>
+<p>首先，你需要一个GitHub账号，没有的话，可以先去申请一下，<a target="_blank" rel="noopener" href="https://github.com/">GitHub</a></p>
 <p>新建仓库，仓库名是<code>username.github.io</code>, username是你的账号名</p>
-<h2 id="6-设置GitHub-Pages"><a href="#6-设置GitHub-Pages" class="headerlink" title="6.设置GitHub Pages"></a>6.设置GitHub Pages</h2><p>其实你不需要怎么设置，在你建立仓库之后</p>
+<h2 id="6-设置GitHub-Pages"><a class="header-anchor" href="#6-设置GitHub-Pages">¶</a>6.设置GitHub Pages</h2>
+<p>其实你不需要怎么设置，在你建立仓库之后</p>
 <p>点击setting，然后再点击左侧的Pages，你会惊奇的发现，你的网站已经上线</p>
 <p>所以说，之后你要怎么继续部署呢，答案是<strong>向这个仓库继续推送已经编译好的静态文件</strong></p>
 <blockquote>
@@ -117,7 +123,8 @@
 <li>进入仓库主页，点击setting，找到Pages</li>
 <li>把分支调成部署的分支，然后你就可以访问<code>https://&lt;username&gt;.github.io/&lt;repo_name&gt;/</code></li>
 </ol>
-<h2 id="7-获取GitHub-Token"><a href="#7-获取GitHub-Token" class="headerlink" title="7.获取GitHub Token"></a>7.获取GitHub Token</h2><p>这个地方是在提交的时候，有了token，他就不问你要密码了</p>
+<h2 id="7-获取GitHub-Token"><a class="header-anchor" href="#7-获取GitHub-Token">¶</a>7.获取GitHub Token</h2>
+<p>这个地方是在提交的时候，有了token，他就不问你要密码了</p>
 <ol>
 <li>点击你的头像</li>
 <li>选择Settings</li>
@@ -145,27 +152,28 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -b 4096 -C &quot;你的邮箱地址&quot;</span><br></pre></td></tr></table></figure>
 <p>其中，<code>-t rsa</code> 表示生成 RSA 加密的密钥对；<code>-b 4096</code> 属性表示生成 4096 位的密钥；<code>-C &quot;你的邮箱地址&quot;</code> 表示在生成密钥时添加注释，这里建议您填写 Github 账户的邮箱地址。</p>
 <p>您会看到提示让您输入存储密钥的文件名和密码，一般情况下，直接按 Enter 选择默认值即可。</p>
-<ol>
+<ol start="2">
 <li>添加公钥</li>
 </ol>
 <p>在生成密钥对后，您可以在命令行终端运行以下命令来查看秘钥：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure>
 <p>这个命令将打印出生成的公钥。然后，将这个公钥添加到您的 GitHub 账户中，在 GitHub 网站上点击头像-&gt;Settings-&gt;SSH and GPG keys，新建 SSH key 后，将刚刚打印出的公钥复制到 SSH Key 字段中。</p>
-<ol>
+<ol start="3">
 <li>修改 Git 仓库地址</li>
 </ol>
 <p>在 Hexo 配置文件 <code>_config.yml</code> 中找到 <code>deploy</code> 部分，将该部分的值设置为：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: git@github.com:&lt;GitHub用户名&gt;/&lt;GitHub用户名&gt;.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-<p>这里主要把 Git 仓库地址改为 SSH 协议的地址，即将 <a target="_blank" rel="noopener" href="https://github.com/">https://github.com/</a> 更改为 git@github.com: 并添加您的 GitHub 用户名。</p>
-<ol>
+<p>这里主要把 Git 仓库地址改为 SSH 协议的地址，即将 <a target="_blank" rel="noopener" href="https://github.com/">https://github.com/</a> 更改为 <a href="mailto:git@github.com">git@github.com</a>: 并添加您的 GitHub 用户名。</p>
+<ol start="4">
 <li>测试 SSH 连接</li>
 </ol>
 <p>修改后，在命令行中执行以下命令来测试是否可以成功连接：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
-<p>其中， git@github.com 是 Git 仓库的 SSH 类型的网址，测试成功的提示信息应该类似于：</p>
+<p>其中， <a href="mailto:git@github.com">git@github.com</a> 是 Git 仓库的 SSH 类型的网址，测试成功的提示信息应该类似于：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hi &lt;GitHub用户名&gt;! You&#x27;ve successfully authenticated, but GitHub does not provide shell access.</span><br></pre></td></tr></table></figure>
 <p>至此，您已经成功地设置好了 SSH 连接。在以后的使用过程中，每次进行 Git 仓库操作时，都不需要再输入账户名和密码，而是直接连接到 GitHub 平台进行安全的代码交互操作。</p>
-<h2 id="8-最佳实践"><a href="#8-最佳实践" class="headerlink" title="8.最佳实践"></a>8.最佳实践</h2><p>如果你是博客项目的话，那么你可以设置评论</p>
+<h2 id="8-最佳实践"><a class="header-anchor" href="#8-最佳实践">¶</a>8.最佳实践</h2>
+<p>如果你是博客项目的话，那么你可以设置评论</p>
 <p>我使用的评论插件是gittalk</p>
 <p>它需要一个GitHub提供的OAuth Apps，其中的Client ID，Client Secret</p>
 <p>获取它，很简单</p>
